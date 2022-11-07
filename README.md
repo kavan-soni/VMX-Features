@@ -61,9 +61,23 @@ Execute ```make prepare```. This will throw error. We need to create a .config f
 Copy the contents of specific kernel version to config file inside linux directory.
 ```cp /boot/config-4.18.0-408.el8.x86_64 .config```
 
-Inside the linux directory, open config file with ```vi .config``` and comment ```CONFIG_SYSTEM_TRUSTED_KEYS```, ```CONFIG_SYSTEM_TRUSTED_KEYRING``` and update ```CONFIG_SYSTEM_REVOCATION_KEYS=""```. Save and exit vim editor.
+Inside the linux directory, open config file with ```vi .config``` and comment ```CONFIG_SYSTEM_TRUSTED_KEYS```, ```CONFIG_SYSTEM_TRUSTED_KEYRING```. 
+Update ```CONFIG_SYSTEM_REVOCATION_KEYS=""```. Save and exit vim editor.
 
 Execute ```make prepare``` and ```make```.
 
 Execute the below command to install all the kernel modules.
 ```sudo make INSTALL_MOD_STRIP=1 modules_install```
+
+
+Since Ubuntu kernel 4.4.0-20 the ```EFI_SECURE_BOOT_SIG_ENFORCE``` kernel config is enabled. That prevents from loading unsigned third party modules if UEFI Secure Boot is enabled. The easiest way to fix this issue is to disable Secure Boot in UEFI (BIOS) settings. Execute the commands below.
+```
+sudo yum install mokutil
+sudo mokutil --disable-validation
+```
+It will require to create a password. The password should be at least 8 characters long. After you reboot, UEFI will ask if you want to change security settings. Choose "Yes".
+
+Execute ```sudo reboot```.
+Execute ```make``` to get the .ko kernel object.
+Execute ```sudo insmod cmpe283-1.ko``` command to insert modules in the kernel.
+Execute ```dmesg``` command to display the output printed on the system message buffer console.

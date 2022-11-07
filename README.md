@@ -84,3 +84,41 @@ sudo mokutil --disable-validation
 (19) Execute ```sudo insmod cmpe283-1.ko``` command to insert modules in the kernel.
 
 (20) Execute ```dmesg``` command to display the output printed on the system message buffer console.
+
+<h3>Output Screenshots:</h3>
+<ul>
+<li>Final make command output with timestamp and kernel version:<br>
+
+![image](https://user-images.githubusercontent.com/38569308/141919965-c990c13b-0442-4e74-9efe-8784bfa29f96.png)
+
+<br>
+  <li>Pinbased control Output:<br>
+    
+![image](https://user-images.githubusercontent.com/38569308/141735854-90103e4d-440a-4a45-a303-3a35eb1a3653.png)
+    
+<br>
+  </li>
+  
+<li>Primary Procbased control output:<br>
+  
+![image](https://user-images.githubusercontent.com/38569308/141735969-e3806d65-53d4-4378-97f1-23e492b2b2eb.png)
+  
+  <br></li>
+
+<li>Secondary Procbased control output:<br>
+  
+![image](https://user-images.githubusercontent.com/38569308/141736059-170ce8de-a38d-476b-8df4-e662fdfc8dbc.png)
+  
+  <br></li>
+
+<li>Exit controls output:<br>
+  
+![image](https://user-images.githubusercontent.com/38569308/141736132-98e4a443-cc86-453b-8e49-d6e96f82382b.png)
+  
+  <br></li>
+
+<li>Entry controls output:<br>
+  
+![image](https://user-images.githubusercontent.com/38569308/141736188-9d0d7c5e-37cd-432e-9a63-932bf0a082a9.png)
+
+  <br></li>

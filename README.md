@@ -65,8 +65,8 @@ sudo dnf install dwarves
 
 (13) Execute ```make prepare``` and ```make```.
 
-(14) Execute the below command to install all the kernel modules.
-```sudo make INSTALL_MOD_STRIP=1 modules_install```
+(14) Execute ```sudo make INSTALL_MOD_STRIP=1 modules_install``` to install all the kernel modules.
+
 
 
 (15) Since Ubuntu kernel 4.4.0-20 the ```EFI_SECURE_BOOT_SIG_ENFORCE``` kernel config is enabled. That prevents from loading unsigned third party modules if UEFI Secure Boot is enabled. The easiest way to fix this issue is to disable Secure Boot in UEFI (BIOS) settings. Execute the commands below.

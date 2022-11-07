@@ -115,6 +115,7 @@ sudo mokutil --disable-validation
 
 <li>Entry controls output:<br>
   
-![image](https://user-images.githubusercontent.com/38569308/141736188-9d0d7c5e-37cd-432e-9a63-932bf0a082a9.png)
+<img width="980" alt="image" src="https://user-images.githubusercontent.com/21690089/200263338-ccf38a2b-358e-4c0f-90b4-bfd024e65f5a.png">
+
 
   <br></li>

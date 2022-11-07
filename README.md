@@ -54,13 +54,12 @@ sudo yum config-manager --set-enabled powertools
 sudo dnf install dwarves
 ```
 
-(9) Execute ```make oldconfig```
+(9) Execute ```make oldconfig```.
  
 (10) Execute ```make prepare```. This will throw error. We need to create a .config file having contents of the specific kernel.
 
 
-(11) Copy the contents of specific kernel version to config file inside linux directory.
-```cp /boot/config-4.18.0-408.el8.x86_64 .config```
+(11) Use ```cp /boot/config-4.18.0-408.el8.x86_64 .config``` to copy the contents of specific kernel version to config file inside linux directory. 
 
 (12) Inside the linux directory, open config file with ```vi .config``` and comment ```CONFIG_SYSTEM_TRUSTED_KEYS```, ```CONFIG_SYSTEM_TRUSTED_KEYRING```. Update ```CONFIG_SYSTEM_REVOCATION_KEYS=""```. Save and exit vim editor.
 

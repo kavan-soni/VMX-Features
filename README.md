@@ -66,6 +66,9 @@ sudo yum -y install bison
 sudo dnf -y install binutils-x86_64-linux-gnu
 sudo yum -y install elfutils-libelf-devel
 sudo yum -y install openssl-devel
+sudo yum install dnf-plugins-core
+sudo yum config-manager --set-enabled powertools
+sudo dnf install dwarves
 ```
 
 Execute ```make oldconfig```
@@ -78,5 +81,5 @@ Copy the contents of specific kernel version to config file inside linux directo
 
 Inside the linux directory, open config file with ```vi .config``` and comment CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_TRUSTED_KEYRING and change the value of CONFIG_SYSTEM_REVOCATION_KEYS to "". Save and exit vim editor.
 
-Execute ```make prepare``` again.
+Execute ```make prepare``` and ```make```.
 

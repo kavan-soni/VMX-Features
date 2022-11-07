@@ -38,10 +38,12 @@ sudo dnf update -y
 sudo dnf install git -y
 ```
 
-Clone torvalds/linux master repo. Crete folder cmpe283 inside the linux folder. Upload the edited cmpe283-1.c and Makefile downloaded from canvas.
+Clone torvalds/linux master repo. Crete folder cmpe283 inside the linux folder.
 ```git clone https://github.com/torvalds/linux.git```
 
-Install make.
+Upload the edited cmpe283-1.c and Makefile downloaded from canvas.
+
+Install make
 ```sudo yum install make```
 
 Execute ```make``` in the linux folder on vm instance. This will fail due to dependency errors.
@@ -55,10 +57,13 @@ sudo yum -y install elfutils-libelf-devel
 sudo yum -y install openssl-devel
 ```
 
-Execute ```make oldconfig``` 
-Execute ```make prepare``` gives cerificate error. We need to create a .config file having contents of the specific kernel.
+Execute ```make oldconfig```
+ 
+Execute ```make prepare```. This will throw error. We need to create a .config file having contents of the specific kernel.
 
-Execute ```cp /boot/config-4.18.0-408.el8.x86_64 .config``` inside linux directory to copy the config file.
+
+Copy the contents of specific kernel version to config file inside linux directory.
+```cp /boot/config-4.18.0-408.el8.x86_64 .config```
 
 Inside the linux directory, open config file with ```vi .config``` and comment CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_TRUSTED_KEYRING and change the value of CONFIG_SYSTEM_REVOCATION_KEYS to "". Save and exit vim editor.
 

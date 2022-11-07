@@ -2,12 +2,13 @@
  CMPE283: Virtualization | Assignment 1: Discovering VMX Features
 
 (1) Add the remaining code sections to the file.(struct, definitions and vm features)
-MSR Name    MSR Index    Description    References
-IA32_VMX_PINBASED_CTLS    0x481    This MSR is used for pinbased controls if no true controls capability    SDM volume 3C, section 24.6.1
-IA32_VMX_PROCBASED_CTLS    0x482    This MSR is used for primary procbased controls if no true controls capability    SDM volume 3C, section 24.6.2
-IA32_VMX_PROCBASED_CTLS2    0x48B    This MSR is used for secondary procbased controls if available    SDM volume 3C, section 24.6.2
-IA32_VMX_EXIT_CTLS    0x483    This MSR is used for exit controls if no true controls capability    SDM volume 3C, section 24.7.1
-IA32_VMX_ENTRY_CTLS    0x484    This MSR is used for entry controls if no true controls capability    SDM volume 3C, section 24.8.1
+| MSR Name |	MSR Index |	Description |	References |
+| :--- | :--- | :--- | :--- |
+| IA32_VMX_PINBASED_CTLS |	0x481 |	This MSR is used for pinbased controls if no true controls capability |	SDM volume 3C, section 24.6.1 |
+| IA32_VMX_PROCBASED_CTLS |	0x482 |	This MSR is used for primary procbased controls if no true controls capability |	SDM volume 3C, section 24.6.2 |
+| IA32_VMX_PROCBASED_CTLS2 |	0x48B |	This MSR is used for secondary procbased controls if available |	SDM volume 3C, section 24.6.2 |
+| IA32_VMX_EXIT_CTLS |	0x483 |	This MSR is used for exit controls if no true controls capability |	SDM volume 3C, section 24.7.1 |
+| IA32_VMX_ENTRY_CTLS |	0x484 |	This MSR is used for entry controls if no true controls capability |	SDM volume 3C, section 24.8.1 |
 
 (2) Create a VM instance on GCP. The below command will create a VM with CentOS running on an Intel machine with nested virtualization enabled.
 ```

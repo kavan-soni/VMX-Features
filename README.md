@@ -51,8 +51,7 @@ sudo dnf install git -y
 ```
 
 Clone torvalds/linux master repo. Create folder cmpe283 inside the linux folder.
-```git clone https://github.com/torvalds/linux.git
-```
+```git clone https://github.com/torvalds/linux.git```
 
 Upload the edited cmpe283-1.c and Makefile downloaded from canvas.
 

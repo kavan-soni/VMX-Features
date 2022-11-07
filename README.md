@@ -90,3 +90,5 @@ Inside the linux directory, open config file with ```vi .config``` and comment C
 
 Execute ```make prepare``` and ```make```.
 
+Execute the below command to install all the kernel modules.
+```sudo make INSTALL_MOD_STRIP=1 modules_install```

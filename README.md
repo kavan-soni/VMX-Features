@@ -63,7 +63,7 @@ sudo dnf install dwarves
 
 (12) Inside the linux directory, open config file with ```vi .config``` and comment ```CONFIG_SYSTEM_TRUSTED_KEYS```, ```CONFIG_SYSTEM_TRUSTED_KEYRING```. Update ```CONFIG_SYSTEM_REVOCATION_KEYS=""```. Save and exit vim editor.
 
-(13) Execute ```make prepare``` and ```make```.
+(13) Execute ```make prepare``` and ```make```. This will take about 1 hour to run.
 
 (14) Execute ```sudo make INSTALL_MOD_STRIP=1 modules_install``` to install all the kernel modules.
 

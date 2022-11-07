@@ -55,7 +55,7 @@ Execute '''make oldconfig'''
 Execute '''make prepare''' gives cerificate error.
 
 So, we need to create a .config file having contents of the specific kernel.
-Execute '''cp /boot/config-4.18.0-408.el8.x86_64 .config''' inside linux directory to copy the config file.
+Execute ```cp /boot/config-4.18.0-408.el8.x86_64 .config``` inside linux directory to copy the config file.
 
 Inside the linux directory, open config file with '''vi .config''' and comment CONFIG_SYSTEM_TRUSTED_KEYS, CONFIG_SYSTEM_TRUSTED_KEYRING and change the value of CONFIG_SYSTEM_REVOCATION_KEYS to "". Save and exit vim editor.
 
